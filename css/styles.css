@@ -523,6 +523,14 @@ gap: 30px;
   fill: var(--white-color);
 }
 
+.footer-links {
+  margin-right: 93px;
+}
+
+
+
+
+
 /* MODAL WINDOW */
 
 .backdrop {
