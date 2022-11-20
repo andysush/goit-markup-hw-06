@@ -439,6 +439,12 @@ gap: 30px;
 
 .footer-container {
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.left-side {
+  display: flex;
   justify-content: left;
   align-items: baseline;
 }
@@ -451,6 +457,10 @@ gap: 30px;
   font-style: normal;
   margin-top: 20px;
   margin-right: 70px;
+}
+
+.address-list {
+  width: 231px;
 }
 
 .footer-address {
@@ -523,10 +533,56 @@ gap: 30px;
   fill: var(--white-color);
 }
 
-.footer-links {
-  margin-right: 93px;
+.pidpyska-form {
+  display: flex;
+  align-items: center;
+  
 }
 
+
+.pidpyska-field {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 16px;
+  color: var(--white-color);
+  outline: unset;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
+  border-radius: 4px;
+  transition: border-color var(--anim-main);
+}
+
+.pidpyska-field:focus {
+  border-color: var(--third-text-color);
+}
+
+.pidpyska-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30/16);
+  letter-spacing: 0.06em;
+  padding: 10px 28px;
+  border: none;
+  color: var(--white-color);
+  background-color: var(--third-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pidpyska-button:hover, .pidpyska-button:focus {
+  background-color: var(--button-active-color)
+}
+ 
+.pidpyska-icon {
+  fill: var(--white-color);
+}
 
 
 
@@ -554,6 +610,7 @@ gap: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translateX(-50%) translateY(-50%) scale(1);
   width: 528px;
   height: 581px;
@@ -589,6 +646,147 @@ gap: 30px;
 .modal-icon {
   fill: var(--black-color);
 }
+
+.modal-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23/20);
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.modal-form-label {
+  display: block;
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  
+}
+
+.modal-form-field {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--anim-main);
+}
+
+.modal-form-field:focus {
+  border-color: var(--third-text-color);
+  outline: transparent;
+}
+
+.modal-form-group {
+  margin-bottom: 20px;
+}
+
+.modal-form-icon {
+  position: absolute;
+  top:50%;
+  left:12px;
+  transform: translateY(-50%);
+  transition: fill var(--anim-main);
+}
+
+.modal-form-field:focus + .modal-form-icon {
+  fill: var(--third-text-color);
+}
+
+.modal-form-text {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--anim-main);
+  resize: none;
+}
+.modal-form-text::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-text:focus {
+  border-color: var(--third-text-color);
+  outline: transparent;
+}
+
+.modal-form-agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.modal-agree {
+  font-size: 14px;
+  line-height: calc(24/14);
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  user-select: none;
+}
+
+.modal-agree-link {
+  color: var(--third-text-color);
+  text-underline-position: under;
+}
+
+.modal-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+  transition: background-size var(--anim-main), background-color var(--anim-main);
+}
+
+.modal-checkbox:checked {
+  outline:transparent;
+  border: 2px solid var(--third-text-color);
+  background-color: var(--third-text-color);
+  background-size: 11px 8px;
+}
+
+.modal-button {
+  display: block;
+  margin: auto;
+  width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30/16);
+  letter-spacing: 0.06em;
+  padding: 10px 28px;
+  border: none;
+  color: var(--white-color);
+  background-color: var(--third-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-button:hover, .modal-button:focus {
+  background-color: var(--button-active-color)
+}
+
 
 /* PORTFOLIO */
 
