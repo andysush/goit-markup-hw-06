@@ -539,7 +539,6 @@ gap: 30px;
   
 }
 
-
 .pidpyska-field {
   width: 358px;
   height: 50px;
@@ -583,8 +582,6 @@ gap: 30px;
 .pidpyska-icon {
   fill: var(--white-color);
 }
-
-
 
 
 /* MODAL WINDOW */
@@ -633,7 +630,6 @@ gap: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   width: 30px;
   height: 30px;
@@ -641,11 +637,15 @@ gap: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
+  transition: fill var(--anim-main);
 }
 
-.modal-icon {
-  fill: var(--black-color);
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--third-text-color);
 }
+
 
 .modal-label {
   display: block;
@@ -660,6 +660,7 @@ gap: 30px;
 
 .modal-form-label {
   display: block;
+  margin-bottom: 10px;
   font-size: 12px;
   line-height: calc(14/12);
   letter-spacing: 0.01em;
@@ -668,7 +669,6 @@ gap: 30px;
 
 .wrapper {
   position: relative;
-  margin-bottom: 10px;
   
 }
 
